@@ -1,0 +1,4 @@
+{
+  "build": { "buildCommand": "bun --bun run build" },
+  "deploy": { "startCommand": "bun --bun run start" }
+}
