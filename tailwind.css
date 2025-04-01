@@ -1,2 +1,6 @@
-@import "tailwindcss" source("./views/**/*.jet");
-@plugin "@tailwindcss/forms"
+@import 'tailwindcss' source('./views/**/*.jet');
+@plugin "@tailwindcss/forms";
+@plugin "daisyui" {
+  logs: false;
+  themes: light --default, dark --prefersdark;
+}

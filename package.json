@@ -8,9 +8,11 @@
     "dev:tailwind": "bun build:tailwind --watch",
     "build:tailwind": "bunx @tailwindcss/cli -i ./tailwind.css -o ./public/tailwind.build.css --minify",
     "build:app": "go build -ldflags \"-s -w\" -o ./app",
-    "build": "bun build:app && bun build:tailwind && echo \"Build completed 😎\""
+    "start": "cd build && ./app",
+    "build": "bun build:app && bun build:tailwind && mkdir build && cp ./app ./build && cp -rf public ./build && echo \"Build completed 😎\""
   },
   "devDependencies": {
+    "daisyui": "^5.0.9",
     "tailwindcss": "^4.0.14"
   }
 }

@@ -18,14 +18,12 @@ func main() {
 
 	app := echo.New()
 
-
 	views := jet.NewSet(
-    	jet.NewOSFileSystemLoader("views"),  // Point directly to the views directory
-     	jet.InDevelopmentMode(),
+		jet.NewOSFileSystemLoader("views"),
+		jet.InDevelopmentMode(),
 	)
 
 	app.Renderer = utils.NewRenderer(views)
-
 
 	app.Use(middleware.LoggerWithConfig(
 		middleware.LoggerConfig{
@@ -33,10 +31,12 @@ func main() {
 		},
 	))
 
+	app.GET("/", func(c echo.Context) error {
+		return c.Render(200, "home.jet", map[string]interface{ any }{})
+	})
+
 	app.GET("/register", func(c echo.Context) error {
-		return c.Render(200, "register.jet", map[string]interface{ any }{
-			"message": fmt.Sprintf("Hello, you've requested: %s\n", c.Request().RequestURI),
-		})
+		return c.Render(200, "register.jet", map[string]interface{ any }{})
 	})
 
 	app.Static("/", "./public")

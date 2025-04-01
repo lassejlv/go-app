@@ -6,12 +6,15 @@
         "@tailwindcss/forms": "^0.5.10",
       },
       "devDependencies": {
+        "daisyui": "^5.0.9",
         "tailwindcss": "^4.0.14",
       },
     },
   },
   "packages": {
     "@tailwindcss/forms": ["@tailwindcss/forms@0.5.10", "", { "dependencies": { "mini-svg-data-uri": "^1.2.3" }, "peerDependencies": { "tailwindcss": ">=3.0.0 || >= 3.0.0-alpha.1 || >= 4.0.0-alpha.20 || >= 4.0.0-beta.1" } }, "sha512-utI1ONF6uf/pPNO68kmN1b8rEwNXv3czukalo8VtJH8ksIkZXr3Q3VYudZLkCsDd4Wku120uF02hYK25XGPorw=="],
+
+    "daisyui": ["daisyui@5.0.9", "", {}, "sha512-RsaehHh45f+0shWgZZaOY09/8eOae2voRsqJCD71j9yrnYgcke0Nj5ys0ZxrW4SPcc4+q96kWyJu0Z8P1zZdoA=="],
 
     "mini-svg-data-uri": ["mini-svg-data-uri@1.4.4", "", { "bin": { "mini-svg-data-uri": "cli.js" } }, "sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg=="],
 
